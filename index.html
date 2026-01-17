@@ -1,0 +1,385 @@
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Logoterapia Esencial: Estructura de Conversión Final | Instituto Venezolano de Logoterapia</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "brand-teal": "#16a3b1",
+                        "brand-navy": "#143f8a",
+                        "brand-slate": "#1e293b",
+                        "background-light": "#fcfdfd",
+                    },
+                    fontFamily: {
+                        "sans": ["Plus Jakarta Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body { @apply font-sans bg-background-light text-brand-slate; }
+            h1, h2, h3, h4 { @apply font-serif; }
+        }
+        .hero-diffusion-text {
+            background: linear-gradient(135deg, #16a3b1 0%, #ffffff 50%, #143f8a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 15px rgba(22, 163, 177, 0.3));
+        }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .frankl-portrait {
+            filter: grayscale(100%);
+            transition: filter 0.7s ease-in-out;
+        }
+        .frankl-portrait:hover {
+            filter: grayscale(0%);
+        }
+        .facilitator-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .facilitator-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(20, 63, 138, 0.2);
+        }
+        .outcome-card {
+            @apply p-8 rounded-3xl bg-white border border-slate-100 shadow-sm transition-all duration-300;
+        }
+        .outcome-card:hover {
+            @apply shadow-xl border-brand-teal/30 -translate-y-1;
+        }
+        .faq-accordion details[open] summary span.rotate-icon {
+            @apply rotate-180;
+        }
+    </style>
+</head>
+<body class="antialiased">
+<header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100">
+<div class="max-w-7xl mx-auto flex justify-center items-center px-6 py-4">
+<img alt="Logo Instituto Venezolano de Logoterapia" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLeZjU6iXZ8nE5QNPD1qMD-In7mEcZGObgA34AwNLiFXLpPSGtaePzEbLG8YomHk_zYk-3mDsc3ef2x3YWWxfxVl3tlqcWOR8gSuHtcOErQHLI_s3W0-P2_RpWHkyn21VyebF9THYvP1oZJmg67pymUNSakgzRIyZsrZ54HrL6CFbsdr6gwgCvT4DdqmjAC1g8dzTJjPcLMKZRsi6Hh7AqKcd31jHduqEZAu0eTxTXJ_zFhWBjEHtJEwtMYUdL1y_0vmTFOi4cmeI"/>
+</div>
+</header>
+<main>
+<section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-brand-navy">
+<div class="absolute inset-0 opacity-20">
+<img alt="Fondo Inspirador" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKEdCBsueqTfpx2DEnZYx6IagowOMC7-XvD3y0YHH2lh1Ren-GiGOGMsTqxYchHAbobCqiG98MLb9VINOivuqpl0gwsqrbuFumhT6Y1XmFxGkvp11yR5kCEwf4uYZOSKv6VLdTKl29mkvs0P-cRfGFnwG_mnze0MA9CqXGygFHzrALCt5l8AccwwTzPOhrwSdGX8jbe5VWLm6zDgCie9_Ul7bXYwfPX28qQOeHdcV91dStL_oOu0rDLkgsQfuvAfpOS_KSsK7_CQE"/>
+</div>
+<div class="max-w-5xl mx-auto px-6 relative z-10 text-center">
+<span class="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-bold uppercase tracking-widest mb-8">
+                Formación Online • Herramientas para la vida
+            </span>
+<h1 class="hero-diffusion-text text-4xl md:text-7xl font-black leading-[1.1] mb-8">
+                Incluso en el dolor más profundo, hay un sentido esperando ser descubierto
+            </h1>
+<p class="text-white/80 text-xl md:text-2xl font-light max-w-3xl mx-auto leading-relaxed mb-12">
+                Aprende a transformar la crisis en oportunidad a través de los pilares de la Logoterapia de Viktor Frankl.
+            </p>
+<div class="flex flex-col items-center gap-6">
+<a class="bg-brand-teal hover:bg-[#128a96] text-white px-12 py-5 rounded-full text-xl font-black transition-all hover:scale-105 shadow-2xl" href="#inscripcion">
+                    Empezar mi camino hoy
+                </a>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 bg-white">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-5xl font-black text-brand-navy mb-6">¿Buscas respuestas en momentos difíciles?</h2>
+<div class="w-20 h-1.5 bg-brand-teal mx-auto rounded-full"></div>
+</div>
+<div class="grid md:grid-cols-4 gap-8 mb-20">
+<div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-brand-teal transition-colors">
+<span class="material-symbols-outlined text-brand-teal text-4xl mb-4 block">sentiment_dissatisfied</span>
+<h3 class="text-xl font-bold mb-3 text-brand-navy">Vacío Existencial</h3>
+<p class="text-slate-600 leading-relaxed">Sientes que a pesar de tus logros, falta algo esencial que le dé peso y propósito a tu día a día.</p>
+</div>
+<div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-brand-teal transition-colors">
+<span class="material-symbols-outlined text-brand-teal text-4xl mb-4 block">explore_off</span>
+<h3 class="text-xl font-bold mb-3 text-brand-navy">Desorientación</h3>
+<p class="text-slate-600 leading-relaxed">Te cuesta encontrar una dirección clara tras atravesar cambios drásticos o pérdidas inesperadas.</p>
+</div>
+<div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-brand-teal transition-colors">
+<span class="material-symbols-outlined text-brand-teal text-4xl mb-4 block">emergency_home</span>
+<h3 class="text-xl font-bold mb-3 text-brand-navy">Crisis Profunda</h3>
+<p class="text-slate-600 leading-relaxed">El peso de las circunstancias parece insuperable y buscas una salida que trascienda la lógica habitual.</p>
+</div>
+<div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-brand-teal transition-colors">
+<span class="material-symbols-outlined text-brand-teal text-4xl mb-4 block">auto_awesome</span>
+<h3 class="text-xl font-bold mb-3 text-brand-navy">Trascendencia</h3>
+<p class="text-slate-600 leading-relaxed">Deseas conectar con algo más grande y descubrir el "para qué" de tu existencia en este mundo.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 bg-brand-teal text-white overflow-hidden relative">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<span class="text-white/80 font-bold tracking-widest uppercase text-sm">Metodología Frankliana</span>
+<h2 class="text-4xl md:text-5xl font-black leading-tight">La Logoterapia: El arte de encontrar sentido</h2>
+<div class="space-y-4">
+<p class="text-xl text-white leading-relaxed font-medium">
+                        Desarrollada por el Dr. Viktor Frankl tras sobrevivir a los campos de concentración, esta disciplina enseña que la principal motivación humana es la búsqueda de sentido. 
+                    </p>
+<p class="text-lg text-white/90 leading-relaxed italic">
+                        Este curso se presenta como una brújula práctica para navegar las tormentas de la vida, ofreciendo un camino hacia la plenitud incluso en la adversidad.
+                    </p>
+</div>
+<div class="space-y-4 pt-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-brand-navy bg-white rounded-full p-1 text-base font-bold">check</span>
+<span class="font-semibold text-lg">Herramientas de resiliencia ante el sufrimiento.</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-brand-navy bg-white rounded-full p-1 text-base font-bold">check</span>
+<span class="font-semibold text-lg">Descubrimiento de valores personales.</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-brand-navy bg-white rounded-full p-1 text-base font-bold">check</span>
+<span class="font-semibold text-lg">Técnicas para superar el vacío existencial.</span>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -top-4 -right-4 bg-brand-navy text-white px-6 py-3 rounded-xl font-black text-sm z-20 shadow-xl rotate-3">
+                    BÚSQUEDA DE SENTIDO
+                </div>
+<div class="rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/20 bg-slate-900">
+<img alt="Retrato histórico de Viktor Frankl" class="frankl-portrait w-full h-[600px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALePNwOznN-dC2RcmrNNxjdnh9tH3ZLD4Ysat59dlZFICvFbUzH3d4iaMK55xDH7Jch53qe2_EMFfprcB1Beo-t1w1IvTpM2_maOMoF79KNmsWgQz7rvKZOYuzElNSTeonJPa2W25CsBOk7aMXbKZQn1JZGOQfjqL11pbBHQNBMiLrQK_7O4MJ6V7oNmcoV1HmkWt-XdE7Nvlfv_Hvw7S7Pms0Bzv-Fw338F28dCA9NvQK6UR-jT1oR_WZdYWOqvHskXo6Z9ULsd4"/>
+</div>
+<p class="text-center mt-6 text-white/70 text-sm font-medium italic">Dr. Viktor Frankl: El hombre en busca de sentido</p>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 bg-white">
+<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-px bg-slate-200 rounded-3xl overflow-hidden border border-slate-200 shadow-xl">
+<div class="bg-white p-12 lg:p-16">
+<h3 class="text-2xl font-black text-brand-teal mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined fill-1">check_circle</span> Este curso es para ti si...
+                </h3>
+<ul class="space-y-6">
+<li class="flex gap-4 text-slate-700">
+<span class="material-symbols-outlined text-brand-teal font-bold">check</span>
+<p class="font-medium">Buscas respuestas más allá de lo material.</p>
+</li>
+<li class="flex gap-4 text-slate-700">
+<span class="material-symbols-outlined text-brand-teal font-bold">check</span>
+<p class="font-medium">Atraviesas una transición vital (duelo, retiro, crisis).</p>
+</li>
+<li class="flex gap-4 text-slate-700">
+<span class="material-symbols-outlined text-brand-teal font-bold">check</span>
+<p class="font-medium">Sientes que tu vida carece de un 'para qué'.</p>
+</li>
+<li class="flex gap-4 text-slate-700">
+<span class="material-symbols-outlined text-brand-teal font-bold">check</span>
+<p class="font-medium">Deseas herramientas prácticas de autoayuda profunda.</p>
+</li>
+</ul>
+</div>
+<div class="bg-slate-50 p-12 lg:p-16">
+<h3 class="text-2xl font-black text-slate-400 mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined">cancel</span> No es para ti si...
+                </h3>
+<ul class="space-y-6">
+<li class="flex gap-4 text-slate-500">
+<span class="material-symbols-outlined text-slate-400 text-base">close</span>
+<p>Buscas una terapia clínica individual rápida.</p>
+</li>
+<li class="flex gap-4 text-slate-500">
+<span class="material-symbols-outlined text-slate-400 text-base">close</span>
+<p>Prefieres soluciones superficiales de 'pensamiento positivo'.</p>
+</li>
+<li class="flex gap-4 text-slate-500">
+<span class="material-symbols-outlined text-slate-400 text-base">close</span>
+<p>No estás dispuesto a reflexionar sobre tu propia existencia.</p>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 bg-slate-50">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<span class="text-brand-teal font-bold tracking-widest uppercase text-sm mb-4 block">Resultados del Curso</span>
+<h2 class="text-4xl md:text-5xl font-black text-brand-navy">Lo que ganarás en este curso</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="outcome-card">
+<div class="w-14 h-14 bg-brand-navy/10 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-brand-navy text-3xl">lightbulb</span>
+</div>
+<h3 class="text-2xl font-bold text-brand-navy mb-4">Claridad Existencial</h3>
+<p class="text-slate-600 leading-relaxed text-lg">Aprenderás a identificar qué valores dan combustible a tu vida hoy mismo.</p>
+</div>
+<div class="outcome-card">
+<div class="w-14 h-14 bg-brand-teal/10 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-brand-teal text-3xl">ads_click</span>
+</div>
+<h3 class="text-2xl font-bold text-brand-navy mb-4">Poder de Elección</h3>
+<p class="text-slate-600 leading-relaxed text-lg">Descubrirás la 'libertad última': la capacidad de elegir tu actitud ante cualquier situación.</p>
+</div>
+<div class="outcome-card">
+<div class="w-14 h-14 bg-brand-navy/10 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-brand-navy text-3xl">healing</span>
+</div>
+<h3 class="text-2xl font-bold text-brand-navy mb-4">Gestión del Dolor</h3>
+<p class="text-slate-600 leading-relaxed text-lg">Convertirás el sufrimiento inevitable en un logro humano mediante el sentido.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 bg-white border-b border-slate-50">
+<div class="max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="absolute -bottom-6 -left-6 bg-brand-teal w-64 h-64 rounded-3xl -z-10 opacity-10"></div>
+<img alt="Manuel García" class="rounded-[2.5rem] w-full aspect-[4/5] object-cover shadow-2xl border-8 border-slate-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYfZcfB1Mh6NKPvuyx53-qKUJvI6DfmboGPxkvnIBjrFBcBWPhg59lFKpYfcYIvjnGfyVoMamX2x5qPxppn3Rn45sg7QzanjgCH7OkGND7tktfwebTeTa0brqcLPqMw1YGzDRBvpMwKPZi8YEZbeMhW103O22uGd7Ab0OA9_gGVjlCgT9jPfkBz3YaAQHEXWe9Hn7WIxrTmdkdwtweqeibm8WQj4C6SonTUAgNQJQGKDisfBzMSZFo7I5c7MijiFcHzKuYC8ukG20"/>
+<div class="absolute -bottom-4 right-8 bg-white p-6 rounded-2xl shadow-xl border border-slate-100">
+<p class="text-brand-navy font-bold italic">"Acompañando la búsqueda del para qué."</p>
+</div>
+</div>
+<div class="space-y-8">
+<div>
+<span class="text-brand-teal font-bold tracking-widest uppercase text-sm mb-4 block">Tu Facilitador</span>
+<h2 class="text-5xl md:text-6xl font-black text-brand-navy mb-4">Manuel García</h2>
+<div class="space-y-1">
+<p class="text-2xl font-bold text-brand-teal">Licenciado en Psicología</p>
+<p class="text-lg font-medium text-slate-500">Presidente del Instituto Venezolano de Logoterapia</p>
+</div>
+</div>
+<p class="text-xl text-slate-600 leading-relaxed">
+                        Con amplia experiencia en formación y acompañamiento desde la Logoterapia, Manuel te guiará de forma cercana y clara a lo largo del proceso.
+                    </p>
+<div class="grid md:grid-cols-2 gap-6 pt-4">
+<div class="facilitator-card p-6 rounded-2xl bg-brand-navy text-white group cursor-default shadow-lg">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-brand-teal">psychology</span>
+<h4 class="font-sans text-xs font-bold uppercase tracking-wider text-brand-teal/80">Especialidad</h4>
+</div>
+<p class="text-xl font-bold font-sans">Formación Humana</p>
+</div>
+<div class="facilitator-card p-6 rounded-2xl border-2 border-brand-navy group cursor-default hover:bg-brand-navy/5">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-brand-navy">center_focus_strong</span>
+<h4 class="font-sans text-xs font-bold uppercase tracking-wider text-brand-navy/60">Enfoque</h4>
+</div>
+<p class="text-xl font-bold text-brand-navy font-sans">Logoterapia IVEL</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 bg-slate-50" id="inscripcion">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-black text-brand-navy mb-4">Empieza tu camino hoy</h2>
+<div class="max-w-3xl mx-auto mt-8">
+<p class="font-serif italic text-xl md:text-2xl text-slate-600">
+                        "Quien tiene un porqué para vivir, puede soportar casi cualquier cómo." — Nietzsche
+                    </p>
+</div>
+</div>
+<div class="max-w-xl mx-auto bg-white rounded-[2.5rem] shadow-[0_40px_100px_-20px_rgba(20,63,138,0.2)] border-2 border-slate-50 overflow-hidden text-center relative">
+<div class="bg-brand-navy text-white py-4 font-black uppercase tracking-widest text-xs">Oportunidad de Transformación</div>
+<div class="p-12 md:p-16">
+<h3 class="text-brand-slate font-bold text-xl mb-2">Inversión en tu bienestar existencial</h3>
+<div class="flex items-center justify-center gap-2 mb-8">
+<span class="text-7xl font-black text-brand-navy">$39</span>
+<div class="text-left">
+<span class="block text-slate-400 font-bold text-xl leading-none">USD</span>
+<span class="block text-slate-300 line-through text-sm">Valor Real $80</span>
+</div>
+</div>
+<ul class="space-y-4 mb-10 text-left max-w-xs mx-auto">
+<li class="flex items-center gap-3 text-slate-600"><span class="material-symbols-outlined text-brand-teal text-sm">check</span> Acceso a la formación completa</li>
+<li class="flex items-center gap-3 text-slate-600"><span class="material-symbols-outlined text-brand-teal text-sm">check</span> Material de lectura digital</li>
+<li class="flex items-center gap-3 text-slate-600"><span class="material-symbols-outlined text-brand-teal text-sm">check</span> Certificado de participación IVEL</li>
+</ul>
+<button class="w-full bg-brand-teal hover:bg-[#128a96] text-white py-5 rounded-2xl text-xl font-black shadow-lg transition-all hover:scale-[1.02] active:scale-95">
+                        Reservar mi cupo ahora
+                    </button>
+<p class="mt-4 text-brand-navy font-bold text-sm">
+                        Cupos limitados para garantizar una guía personalizada.
+                    </p>
+<div class="mt-8 flex items-center justify-center gap-6 opacity-40">
+<img alt="Stripe" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzb1dR7elAvuvUwevuKSbvm2DonlYDas_-jjYZNjF6P-VJdQXvzWqXebOcyTIORXf9dSzeLMf7wusKtjWnp4bg9qCfQQJkle9a3ClrWP1_k_v2PbM_nZgJ2y5aSwnW5EFa7kVnc7F1G03Tuy9z7b9A0LmQ42QreNt_jWnKCAiDJInWevbCHOBOAO47kfeL33tdn0_TJy8zN760-hGiYTA5ZuHDZgL2TVLkkLgdk7wC1UiqTy0N3P7-LeLkYehmKusEtDSopKsu0XM"/>
+<img alt="PayPal" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFieZAF4IRRysHjWsFwN5thRFjYbdGfs2GKvCy2xqcnoEKwHKjZ8QgQmAmOupIOpz0Z_vyyPDetM3XNIj3AcEYz0XAuDc-IT5xfsEG_YTaF3V-KwEMIaLZLvik5qhTrCBzAdSXprPDy6lg4eug_OA1S4Esd8Ia7-ZfaakdgCIYGCaG7dzLYirKgg0rgueCGoJi8EvDn6fM13oSTpDvY0K5QaqT5CgeZviNP5M0XQ_4Ofplclrg3Plr-DzpmE06AIcFzbZ5fRdinyY"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 bg-white">
+<div class="max-w-3xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-black text-brand-navy mb-4">Preguntas Frecuentes</h2>
+<div class="w-16 h-1 bg-brand-teal mx-auto rounded-full"></div>
+</div>
+<div class="space-y-4 faq-accordion">
+<details class="group bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none font-bold text-brand-navy">
+                        ¿Necesito conocimientos previos en psicología?
+                        <span class="material-symbols-outlined transition-transform duration-300 rotate-icon">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-slate-600 leading-relaxed">
+                        No, este curso está diseñado para cualquier persona interesada en su crecimiento personal. Los conceptos se explican de forma sencilla y aplicable a la vida diaria.
+                    </div>
+</details>
+<details class="group bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none font-bold text-brand-navy">
+                        ¿Cómo accedo al material del curso?
+                        <span class="material-symbols-outlined transition-transform duration-300 rotate-icon">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-slate-600 leading-relaxed">
+                        Una vez completada tu inscripción, recibirás un correo electrónico con los datos de acceso a nuestra plataforma educativa donde encontrarás los videos y lecturas.
+                    </div>
+</details>
+<details class="group bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none font-bold text-brand-navy">
+                        ¿El curso es en vivo o grabado?
+                        <span class="material-symbols-outlined transition-transform duration-300 rotate-icon">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-slate-600 leading-relaxed">
+                        El curso consta de módulos pre-grabados que puedes ver a tu propio ritmo, junto con sesiones de acompañamiento programadas que se anuncian a los inscritos.
+                    </div>
+</details>
+<details class="group bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none font-bold text-brand-navy">
+                        ¿Recibiré un certificado?
+                        <span class="material-symbols-outlined transition-transform duration-300 rotate-icon">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-slate-600 leading-relaxed">
+                        Sí, al finalizar el contenido recibirás un certificado digital de participación avalado por el Instituto Venezolano de Logoterapia (IVEL).
+                    </div>
+</details>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-brand-navy text-white pt-24 pb-12">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-20 max-w-2xl mx-auto">
+<h2 class="text-4xl font-serif font-black mb-6">Tu vida tiene un sentido, atrévete a escucharlo</h2>
+<p class="text-white/60 text-lg mb-10">Instituto Venezolano de Logoterapia y Análisis Existencial.</p>
+<img alt="IVEL Logo Footer" class="h-20 mx-auto mb-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlvg3_Qz7WBnJ3q3wNuQ9FK-PzE9gli1PiwyWMtj1CdK0a67q2baBoZxpJzuqKKC3t0OveGbes9dM3USErmxAJ1OAmsDOKHQfLpjSZuYVr1udO3TDoOVZnWPxAqg5GqD81-ecgrp7GOcCvM1Skiubkudm6ICSDnyg1MH-bZmJsWns5L2WPl8Kay_bANpdHlcQ3r2i1TuqLUiizXCKM10Mzz_qhRodiUwAr3y7yGn-g0ax_aUmjrMgiTBKynEG4Sz5d1FEjBzcw1_I"/>
+</div>
+<div class="border-t border-white/10 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
+<p class="text-white/40 text-sm">© 2024 IVEL. Todos los derechos reservados.</p>
+<div class="flex gap-8">
+<a class="text-white/40 hover:text-brand-teal transition-colors text-sm font-bold" href="#">Privacidad</a>
+<a class="text-white/40 hover:text-brand-teal transition-colors text-sm font-bold" href="#">Términos</a>
+<a class="text-white/40 hover:text-brand-teal transition-colors text-sm font-bold" href="#">Contacto</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>
