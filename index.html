@@ -411,13 +411,13 @@
 </footer>
 
 </body></html>
-<div id="chat-widget" class="fixed bottom-28 right-8 z-[60] hidden">
+<div id="chat-widget" class="fixed bottom-24 right-8 z-[60] hidden">
     <div class="bg-white dark:bg-slate-800 w-80 md:w-96 rounded-3xl shadow-2xl border border-slate-100 overflow-hidden font-['Inter']">
         <div class="bg-[#0f3a85] p-6 text-white flex items-center gap-3">
             <div class="relative flex-shrink-0">
                 <img src="asesora.png" 
                      alt="Asesora" 
-                     class="w-12 h-12 object-contain bg-transparent">
+                     class="w-12 h-12 rounded-full object-cover border-2 border-[#19a39a] bg-white">
                 <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-[#0f3a85] rounded-full"></div>
             </div>
             <div>
@@ -444,13 +444,12 @@
     </div>
 </div>
 
-<button onclick="toggleChat()" class="fixed bottom-4 right-4 w-24 h-24 z-[60] hover:scale-110 transition-all focus:outline-none bg-transparent border-none">
-    <div class="relative w-full h-full flex items-center justify-center">
+<button onclick="toggleChat()" class="fixed bottom-8 right-8 w-16 h-16 z-[60] hover:scale-110 transition-all focus:outline-none">
+    <div class="relative w-full h-full">
         <img src="asesora.png" 
-             alt="Abrir Chat" 
-             class="w-full h-full object-contain filter drop-shadow-[0_10px_10px_rgba(0,0,0,0.3)]">
-        
-        <span class="absolute top-4 right-4 flex h-4 w-4">
+             alt="Chat" 
+             class="w-full h-full rounded-full shadow-2xl border-2 border-[#19a39a] bg-white object-cover">
+        <span class="absolute top-0 right-0 flex h-4 w-4">
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#19a39a] opacity-75"></span>
           <span class="relative inline-flex rounded-full h-4 w-4 bg-[#19a39a]"></span>
         </span>
@@ -471,13 +470,13 @@ function handleChat() {
     
     if (input.value.trim() === "") return;
 
-    // Mensaje del Usuario
+    // Mensaje Usuario
     const userDiv = document.createElement('div');
     userDiv.className = "bg-[#0f3a85] text-white p-3 rounded-2xl rounded-tr-none shadow-sm text-sm ml-auto max-w-[80%]";
     userDiv.textContent = input.value;
     container.appendChild(userDiv);
 
-    // Respuesta con Lógica de Bolívares y Sentido
+    // Respuesta
     setTimeout(() => {
         const botDiv = document.createElement('div');
         botDiv.className = "bg-white p-4 rounded-2xl rounded-tl-none shadow-sm text-sm border border-slate-100 max-w-[85%]";
@@ -487,14 +486,14 @@ function handleChat() {
                 <p class="mb-3 text-slate-700">¡Con gusto! Aceptamos pagos en bolívares. Te voy a enviar directamente con nuestro equipo de administración para que te den los datos del **Pago Móvil**.</p>
                 <a href="https://wa.me/${tlf}?text=Hola,%20deseo%20realizar%20mi%20pago%20en%20bolívares.%20Por%20favor%20envíenme%20los%20datos." 
                    target="_blank" 
-                   class="flex items-center justify-center gap-2 bg-[#19a39a] text-white px-3 py-3 rounded-xl text-center font-bold text-xs hover:opacity-90 transition-all">
+                   class="flex items-center justify-center gap-2 bg-[#19a39a] text-white px-3 py-3 rounded-xl text-center font-bold text-xs hover:opacity-90">
                     <span class="material-symbols-outlined">payments</span> IR A PAGAR EN BOLÍVARES
                 </a>
             `;
         } else {
             botDiv.innerHTML = `
                 <p class="mb-3 italic text-slate-600 font-serif">"La vida nunca se vuelve insoportable por las circunstancias, sino solo por falta de sentido y propósito."</p>
-                <p class="mb-4 text-[#0f3a85] font-semibold text-center uppercase tracking-wider text-[11px]">¿Cómo podemos acompañarte hoy?</p>
+                <p class="mb-4 text-[#0f3a85] font-semibold">¿Cómo quieres comenzar tu proceso?</p>
                 <div class="flex flex-col gap-2">
                     <a href="https://wa.me/${tlf}?text=Hola,%20busco%20apoyo%20personal." target="_blank" class="bg-[#19a39a] text-white px-3 py-2 rounded-xl text-center font-bold text-xs hover:opacity-90">BUSCO APOYO PERSONAL</a>
                     <a href="https://wa.me/${tlf}?text=Hola,%20información%20certificación." target="_blank" class="bg-[#0f3a85] text-white px-3 py-2 rounded-xl text-center font-bold text-xs hover:opacity-90">CERTIFICACIÓN PROFESIONAL</a>
