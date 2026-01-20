@@ -411,6 +411,48 @@
 </footer>
 
 </body></html>
+async function sendMessage() {
+    const input = document.getElementById('user-input');
+    const container = document.getElementById('chat-messages');
+    const mensajeUsuario = input.value.toLowerCase();
+    
+    if (mensajeUsuario.trim() === "") return;
+
+    // 1. Mostrar mensaje del usuario
+    container.innerHTML += `<div class="bg-brand-teal text-white p-3 rounded-lg ml-8 text-right">${input.value}</div>`;
+    input.value = "";
+
+    // 2. Lógica Especial para Bolívares
+    if (mensajeUsuario.includes("bolívares") || mensajeUsuario.includes("bolivares") || mensajeUsuario.includes("bs")) {
+        setTimeout(() => {
+            container.innerHTML += `
+                <div class="bg-slate-200 p-3 rounded-lg mr-8 text-slate-700">
+                    ¡Claro que sí! En el Instituto facilitamos tu inscripción. Puedes realizar tu pago en bolívares de forma segura. Te estoy redirigiendo al botón de pago...
+                </div>`;
+            container.scrollTop = container.scrollHeight;
+            
+            // Redirección al botón de pago en bolívares después de 3 segundos
+            setTimeout(() => {
+                window.location.href = "#boton-pago-bolivares"; // Asegúrate de que tu botón tenga este ID
+            }, 3000);
+        }, 1000);
+        return;
+    }
+
+    // 3. Respuesta General del Agente (Conexión API)
+    // Aquí iría la llamada fetch a Gemini que configuramos antes
+    simularRespuestaAgente(container);
+}
+
+function simularRespuestaAgente(container) {
+    setTimeout(() => {
+        container.innerHTML += `
+            <div class="bg-slate-200 p-3 rounded-lg mr-8 text-slate-700 italic">
+                La Logoterapia nos enseña que siempre tenemos la libertad de elegir nuestra actitud. ¿Te gustaría saber cómo este curso te ayudará a encontrar sentido en tu día a día?
+            </div>`;
+        container.scrollTop = container.scrollHeight;
+    }, 1500);
+}
 
 
 
