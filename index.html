@@ -409,51 +409,97 @@
 </div>
 </div>
 </footer>
-async function sendMessage() {
-    const input = document.getElementById('user-input');
-    const container = document.getElementById('chat-messages');
-    const mensajeUsuario = input.value.toLowerCase();
-    
-    if (mensajeUsuario.trim() === "") return;
-
-    // 1. Mostrar mensaje del usuario
-    container.innerHTML += `<div class="bg-brand-teal text-white p-3 rounded-lg ml-8 text-right">${input.value}</div>`;
-    input.value = "";
-
-    // 2. Lógica Especial para Bolívares
-    if (mensajeUsuario.includes("bolívares") || mensajeUsuario.includes("bolivares") || mensajeUsuario.includes("bs")) {
-        setTimeout(() => {
-            container.innerHTML += `
-                <div class="bg-slate-200 p-3 rounded-lg mr-8 text-slate-700">
-                    ¡Claro que sí! En el Instituto facilitamos tu inscripción. Puedes realizar tu pago en bolívares de forma segura. Te estoy redirigiendo al botón de pago...
-                </div>`;
-            container.scrollTop = container.scrollHeight;
-            
-            // Redirección al botón de pago en bolívares después de 3 segundos
-            setTimeout(() => {
-                window.location.href = "#boton-pago-bolivares"; // Asegúrate de que tu botón tenga este ID
-            }, 3000);
-        }, 1000);
-        return;
-    }
-
-    // 3. Respuesta General del Agente (Conexión API)
-    // Aquí iría la llamada fetch a Gemini que configuramos antes
-    simularRespuestaAgente(container);
-}
-
-function simularRespuestaAgente(container) {
-    setTimeout(() => {
-        container.innerHTML += `
-            <div class="bg-slate-200 p-3 rounded-lg mr-8 text-slate-700 italic">
-                La Logoterapia nos enseña que siempre tenemos la libertad de elegir nuestra actitud. ¿Te gustaría saber cómo este curso te ayudará a encontrar sentido en tu día a día?
-            </div>`;
-        container.scrollTop = container.scrollHeight;
-    }, 1500);
-}
 
 </body></html>
 
+<div id="chat-widget" class="fixed bottom-24 right-8 z-[60] hidden">
+    <div class="bg-white dark:bg-slate-800 w-80 md:w-96 rounded-3xl shadow-2xl border border-slate-100 overflow-hidden font-['Inter']">
+        <div class="bg-[#0f3a85] p-6 text-white flex items-center gap-3">
+            <div class="relative">
+                <img src="URL_DE_TU_IMAGEN_MUJER.jpg" alt="Asesora" class="w-12 h-12 rounded-full object-cover border-2 border-[#19a39a]">
+                <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-[#0f3a85] rounded-full"></div>
+            </div>
+            <div>
+                <p class="font-bold text-sm text-white">Asesora Empática</p>
+                <p class="text-[10px] opacity-80 uppercase tracking-widest text-white">Instituto de Logoterapia</p>
+            </div>
+        </div>
+
+        <div id="chat-messages" class="h-80 overflow-y-auto p-4 space-y-4 bg-slate-50 dark:bg-slate-900">
+            <div class="bg-white dark:bg-slate-800 p-3 rounded-2xl rounded-tl-none shadow-sm text-sm border border-slate-100">
+                Hola, soy tu guía en el Instituto. ¿Sientes que buscas herramientas para tu crecimiento personal o te interesa formarte profesionalmente con nosotros?
+            </div>
+        </div>
+
+        <div class="p-4 border-t border-slate-100 bg-white dark:bg-slate-800">
+            <div class="flex gap-2">
+                <input type="text" id="user-input" placeholder="Escribe tu mensaje..." class="flex-1 text-sm border-none bg-slate-100 rounded-full px-4 focus:ring-2 focus:ring-[#19a39a]">
+                <button onclick="handleChat()" class="bg-[#19a39a] text-white p-2 rounded-full hover:bg-[#0f3a85] transition-all">
+                    <span class="material-symbols-outlined text-white">send</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button onclick="toggleChat()" class="fixed bottom-8 right-8 w-16 h-16 bg-[#19a39a] text-white rounded-full shadow-2xl z-[60] flex items-center justify-center hover:scale-110 transition-all">
+    <span class="material-symbols-outlined text-3xl text-white">chat</span>
+</button>
+
+<script>
+function toggleChat() {
+    const chat = document.getElementById('chat-widget');
+    chat.classList.toggle('hidden');
+}
+
+function handleChat() {
+    const input = document.getElementById('user-input');
+    const container = document.getElementById('chat-messages');
+    const tlf = "584127614923"; 
+    const textoUsuario = input.value.toLowerCase();
+    
+    if (input.value.trim() === "") return;
+
+    // Mensaje del usuario
+    const userDiv = document.createElement('div');
+    userDiv.className = "bg-[#0f3a85] text-white p-3 rounded-2xl rounded-tr-none shadow-sm text-sm ml-auto max-w-[80%]";
+    userDiv.textContent = input.value;
+    container.appendChild(userDiv);
+
+    // Lógica de Respuesta
+    setTimeout(() => {
+        const botDiv = document.createElement('div');
+        botDiv.className = "bg-white p-4 rounded-2xl rounded-tl-none shadow-sm text-sm border border-slate-100 max-w-[85%]";
+        
+        // CASO 1: Pregunta por Bolívares
+        if (textoUsuario.includes("bolivares") || textoUsuario.includes("bolívares") || textoUsuario.includes("pago movil")) {
+            botDiv.innerHTML = `
+                <p class="mb-3 text-slate-700">¡Claro que sí! Puedes realizar tu inscripción en bolívares de forma sencilla. Te estoy dirigiendo a nuestra sección de pago local...</p>
+                <div class="flex items-center gap-2 text-[#19a39a] font-bold animate-pulse">
+                    <span class="material-symbols-outlined">payments</span> Redirigiendo...
+                </div>
+            `;
+            setTimeout(() => { window.location.href = "#seccion-pagos-bs"; }, 2500);
+        } 
+        // CASO 2: Respuesta AIDA estándar
+        else {
+            botDiv.innerHTML = `
+                <p class="mb-3 italic text-slate-600">Entiendo tu inquietud y es el primer paso para encontrar respuestas.</p>
+                <p class="mb-4 text-[#0f3a85] font-semibold">¿Cómo podemos acompañarte mejor hoy?</p>
+                <div class="flex flex-col gap-2">
+                    <a href="https://wa.me/${tlf}?text=Hola,%20busco%20apoyo%20personal." target="_blank" class="bg-[#19a39a] text-white px-3 py-2 rounded-xl text-center font-bold text-xs hover:opacity-90">BUSCO APOYO PERSONAL</a>
+                    <a href="https://wa.me/${tlf}?text=Hola,%20información%20certificación." target="_blank" class="bg-[#0f3a85] text-white px-3 py-2 rounded-xl text-center font-bold text-xs hover:opacity-90">CERTIFICACIÓN PROFESIONAL</a>
+                </div>
+            `;
+        }
+        
+        container.appendChild(botDiv);
+        container.scrollTop = container.scrollHeight;
+    }, 800);
+
+    input.value = "";
+}
+</script>
 
 
 
