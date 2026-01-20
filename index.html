@@ -411,18 +411,17 @@
 </footer>
 
 </body></html>
-</div>
 <div id="chat-widget" class="fixed bottom-24 right-8 z-[60] hidden">
     <div class="bg-white dark:bg-slate-800 w-80 md:w-96 rounded-3xl shadow-2xl border border-slate-100 overflow-hidden font-['Inter']">
         <div class="bg-[#0f3a85] p-6 text-white flex items-center gap-3">
             <div class="relative flex-shrink-0">
-                <img src="asesora.png" 
+                <img src="https://input.com/image_generation_content/0" 
                      alt="Asesora" 
                      class="w-12 h-12 object-contain bg-transparent">
                 <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-[#0f3a85] rounded-full"></div>
             </div>
             <div>
-                <p class="font-bold text-sm text-white leading-tight">Asesora Virtual</p>
+                <p class="font-bold text-sm text-white leading-tight">Asesora Empática</p>
                 <p class="text-[10px] opacity-80 uppercase tracking-widest text-white">Instituto de Logoterapia</p>
             </div>
         </div>
@@ -447,7 +446,7 @@
 
 <button onclick="toggleChat()" class="fixed bottom-8 right-8 w-20 h-20 z-[60] hover:scale-110 transition-all focus:outline-none bg-transparent">
     <div class="relative w-full h-full">
-        <img src="asesora.png" 
+        <img src="https://input.com/image_generation_content/0" 
              alt="Abrir Chat" 
              class="w-full h-full object-contain drop-shadow-xl">
         
@@ -509,28 +508,7 @@ function handleChat() {
 
     input.value = "";
 }
-</script>        } else {
-            botDiv.innerHTML = `
-                <p class="mb-3 italic text-slate-600 font-serif">"La vida nunca se vuelve insoportable por las circunstancias, sino solo por falta de sentido y propósito."</p>
-                <p class="mb-4 text-[#0f3a85] font-semibold">¿Cómo quieres comenzar tu proceso?</p>
-                <div class="flex flex-col gap-2">
-                    <a href="https://wa.me/${tlf}?text=Hola,%20busco%20apoyo%20personal." target="_blank" class="bg-[#19a39a] text-white px-3 py-2 rounded-xl text-center font-bold text-xs hover:opacity-90">BUSCO APOYO PERSONAL</a>
-                    <a href="https://wa.me/${tlf}?text=Hola,%20información%20certificación." target="_blank" class="bg-[#0f3a85] text-white px-3 py-2 rounded-xl text-center font-bold text-xs hover:opacity-90">CERTIFICACIÓN PROFESIONAL</a>
-                </div>
-            `;
-        }
-        
-        container.appendChild(botDiv);
-        container.scrollTop = container.scrollHeight;
-    }, 800);
-
-    input.value = "";
-}
 </script>
-
-
-
-
 
 
 
