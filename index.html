@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html class="light" lang="es"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Logoterapia Esencial | Instituto Venezolano de Logoterapia</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Logoterapia Esencial | Instituto Venezolano de Logoterapia</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -15,8 +19,6 @@
                         "brand-teal": "#19A69A",
                         "brand-navy": "#123D8A",
                         "brand-slate": "#1e293b",
-                        "background-light": "#fcfdfd",
-                        "neutral-soft": "#f8fafc",
                     },
                     fontFamily: {
                         "sans": ["Plus Jakarta Sans", "sans-serif"],
@@ -26,545 +28,171 @@
             },
         }
     </script>
-<style type="text/tailwindcss">
+
+    <style type="text/tailwindcss">
         @layer base {
-            body { @apply font-sans bg-background-light text-brand-slate; }
+            body { @apply font-sans bg-[#fcfdfd] text-[#1e293b]; }
             h1, h2, h3, h4 { @apply font-serif; }
         }
-        .hero-gradient {
-            background: linear-gradient(135deg, #19A69A 0%, #ffffff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        /* Efecto Viktor Frankl */
         .frankl-portrait {
             filter: grayscale(100%);
             transition: filter 0.7s ease-in-out;
         }
-        .frankl-portrait:hover {
-            filter: grayscale(0%);
-        }
+        .frankl-portrait:hover { filter: grayscale(0%); }
+        
+        /* Efecto Facilitador */
         .facilitator-photo {
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .facilitator-photo-container:hover .facilitator-photo {
+        .facilitator-container:hover .facilitator-photo {
             transform: translateY(-12px) scale(1.05);
         }
-        .diffuse-gradient {
-            background: radial-gradient(circle at center, rgba(18, 61, 138, 0.4) 0%, rgba(25, 166, 154, 0.2) 50%, transparent 100%);
-        }
-    </style>
-</head>
-<body class="antialiased">
-<header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100">
-<div class="max-w-7xl mx-auto flex items-center justify-center px-6 py-4">
-<div class="flex items-center gap-4">
-<img alt="Logo IVEL VF" class="h-12 w-auto" src="logo.png"/>
-<div class="h-10 w-px bg-slate-200 hidden sm:block"></div>
-<div class="flex flex-col">
-<span class="text-brand-navy font-extrabold tracking-tight text-sm leading-none uppercase">Instituto Venezolano</span>
-<span class="text-brand-teal font-medium tracking-tight text-[10px] leading-none uppercase mt-1">de Logoterapia Y ANÁLISIS EXISTENCIAL</span>
-</div>
-</div>
-</div>
-</header>
-<main>
-<section class="relative pt-32 pb-20 md:pt-48 md:pb-40 overflow-hidden bg-brand-navy">
-<div class="absolute inset-0">
-<img alt="Serene horizon meaning" class="w-full h-full object-cover opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKEdCBsueqTfpx2DEnZYx6IagowOMC7-XvD3y0YHH2lh1Ren-GiGOGMsTqxYchHAbobCqiG98MLb9VINOivuqpl0gwsqrbuFumhT6Y1XmFxGkvp11yR5kCEwf4uYZOSKv6VLdTKl29mkvs0P-cRfGFnwG_mnze0MA9CqXGygFHzrALCt5l8AccwwTzPOhrwSdGX8jbe5VWLm6zDgCie9_Ul7bXYwfPX28qQOeHdcV91dStL_oOu0rDLkgsQfuvAfpOS_KSsK7_CQE"/>
-<div class="absolute inset-0 diffuse-gradient"></div>
-</div>
-<div class="max-w-5xl mx-auto px-6 relative z-10 text-center">
-<span class="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-bold uppercase tracking-widest mb-8">
-                Taller Online en Vivo • Via Zoom
-            </span>
-<h1 class="text-white text-4xl md:text-7xl font-black leading-[1.1] mb-8">
-                Incluso en el dolor más profundo, hay un sentido esperando ser descubierto
-            </h1>
-<p class="text-white/80 text-xl md:text-2xl font-light max-w-3xl mx-auto leading-relaxed mb-12">
-                Aprende a transformar la crisis en oportunidad a través de los fundamentos de la Logoterapia de Viktor Frankl.
-            </p>
-<div class="flex flex-col items-center gap-6">
-<button class="bg-brand-teal hover:bg-[#158e83] text-white px-12 py-5 rounded-full text-xl font-black transition-all hover:scale-105 shadow-2xl">
-                    Inscribirme ahora por $39
-                </button>
-<div class="flex items-center gap-4 text-white/60 text-sm">
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> Próxima fecha: 9 y 10 Febrero</span>
-<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">group</span> Cupos Limitados</span>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 px-6 bg-white">
-<div class="max-w-7xl mx-auto">
-<div class="text-center mb-16">
-<h2 class="text-3xl md:text-5xl font-black text-brand-navy mb-6">¿Sientes un vacío que nada parece llenar?</h2>
-<div class="w-20 h-1.5 bg-brand-teal mx-auto rounded-full"></div>
-</div>
-<div class="grid md:grid-cols-4 gap-8 mb-20">
-<div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-brand-teal transition-colors text-center">
-<span class="material-symbols-outlined text-brand-teal text-4xl mb-4 block">sentiment_dissatisfied</span>
-<h3 class="text-xl font-bold mb-3 text-brand-navy">Vacío Existencial</h3>
-<p class="text-slate-600 leading-relaxed text-sm">Sientes que a pesar de tenerlo "todo", falta algo esencial que le dé peso a tu vida.</p>
-</div>
-<div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-brand-teal transition-colors text-center">
-<span class="material-symbols-outlined text-brand-teal text-4xl mb-4 block">explore_off</span>
-<h3 class="text-xl font-bold mb-3 text-brand-navy">Desorientación</h3>
-<p class="text-slate-600 leading-relaxed text-sm">Te cuesta tomar decisiones o encontrar una dirección clara tras cambios drásticos.</p>
-</div>
-<div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-brand-teal transition-colors text-center">
-<span class="material-symbols-outlined text-brand-teal text-4xl mb-4 block">emergency_home</span>
-<h3 class="text-xl font-bold mb-3 text-brand-navy">Crisis Profunda</h3>
-<p class="text-slate-600 leading-relaxed text-sm">El dolor de una pérdida o fracaso parece insuperable y sin una salida lógica.</p>
-</div>
-<div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-brand-teal transition-colors text-center">
-<span class="material-symbols-outlined text-brand-teal text-4xl mb-4 block">auto_awesome</span>
-<h3 class="text-xl font-bold mb-3 text-brand-navy">Anhelo de Trascendencia</h3>
-<p class="text-slate-600 leading-relaxed text-sm">Buscas ir más allá de la supervivencia cotidiana para conectar con un propósito mayor.</p>
-</div>
-</div>
-<div class="max-w-4xl mx-auto text-center">
-<p class="font-serif italic text-2xl md:text-3xl text-brand-navy leading-relaxed opacity-90 border-t border-slate-100 pt-12">
-                    "No somos víctimas de nuestras circunstancias, sino dueños de nuestra actitud frente a ellas."
-                </p>
-</div>
-</div>
-</section>
-<section class="py-24 px-6 bg-brand-teal text-white overflow-hidden relative">
-<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-<div class="space-y-8">
-<span class="text-white/80 font-bold tracking-widest uppercase text-sm"</span>
-<h2 class="text-4xl md:text-5xl font-black leading-tight">La Logoterapia:</h2>
-<div class="space-y-4">
-                    </p>
-<p class="text-lg text-white leading-relaxed medium">
-Creada por Viktor Frankl, es un enfoque de psicoterapia existencial que sostiene que el principal motor del ser humano es la búsqueda de sentido, más allá del placer o la evitación del dolor. Ayuda a descubrir propósito incluso en la adversidad y enseña que, aunque no siempre podamos cambiar las circunstancias, sí podemos elegir nuestra actitud y responder con responsabilidad. Su objetivo no es eliminar el sufrimiento, sino encontrar significado en él, fortaleciendo la dignidad, la esperanza y la capacidad de trascender para vivir una vida más plena y con dirección
-                    </p>
-<p class="text-lg text-white leading-relaxed medium">
-                        Este curso introductorio es una brújula práctica para quienes buscan respuestas profundas sin necesidad de ser psicólogos.
-                    </p>
-</div>
-<div class="space-y-4 pt-4">
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-brand-navy bg-white/20 rounded-full p-1">check</span>
-<span class="font-semibold text-lg">Herramientas de resiliencia ante el sufrimiento.</span>
-</div>
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-brand-navy bg-white/20 rounded-full p-1">check</span>
-<span class="font-semibold text-lg">Descubrimiento de valores personales.</span>
-</div>
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-brand-navy bg-white/20 rounded-full p-1">check</span>
-<span class="font-semibold text-lg">Técnicas para superar el vacío existencial.</span>
-</div>
-</div>
-</div>
-<div class="relative group">
-<div class="absolute -top-4 -right-4 bg-brand-navy text-white px-6 py-3 rounded-xl font-black text-sm z-20 shadow-xl rotate-3">
-                    EL PODER DEL SENTIDO
-                </div>
-<div class="rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/20 bg-slate-200">
-<img alt="Viktor Frankl Portrait" class="frankl-portrait w-full h-[600px] object-cover" src="viktor frankl.png"/>
-</div>
-<div class="absolute -bottom-16 left-20 -translate-x-1/2 bg-white p-4 rounded-2xl shadow-2xl w-[170px] border border-slate-100 z-40 animate-float text-center">
-    <span class="text-brand-teal text-xl serif leading-none block mb-1 mx-auto">“</span>
-    
-    <p class="text-brand-navy italic font-serif text-[12px] leading-tight mx-auto px-1">
-        "Cuando no podemos cambiar la situación, el desafío es cambiarnos a nosotros mismos."
-    </p>
-    
-    <div class="w-8 h-[1px] bg-slate-100 mx-auto my-2"></div>
-    
-    <p class="text-[8px] text-slate-400 font-bold uppercase tracking-widest">
-        — Viktor Frankl
-    </p>
-</div>
-</div>
-</section>
-<section class="py-24 px-6 bg-slate-50">
-<div class="max-w-7xl mx-auto">
-<div class="text-center mb-16">
-<h2 class="text-3xl md:text-5xl font-black text-brand-navy mb-6">Lo que ganarás en este curso</h2>
-</div>
-<div class="grid md:grid-cols-3 gap-12">
-<div class="text-center space-y-4">
-<div class="w-20 h-20 bg-brand-navy/5 rounded-full flex items-center justify-center mx-auto mb-6">
-<span class="material-symbols-outlined text-brand-navy text-4xl">psychology</span>
-</div>
-<h3 class="text-2xl font-bold text-brand-navy">Claridad Existencial</h3>
-<p class="text-slate-600 leading-relaxed">Identifica los valores que realmente motivan tu existencia más allá de las presiones sociales.</p>
-</div>
-<div class="text-center space-y-4">
-<div class="w-20 h-20 bg-brand-teal/5 rounded-full flex items-center justify-center mx-auto mb-6">
-<span class="material-symbols-outlined text-brand-teal text-4xl">ads_click</span>
-</div>
-<h3 class="text-2xl font-bold text-brand-teal">Poder de Elección</h3>
-<p class="text-slate-600 leading-relaxed">Reconoce el espacio entre el estímulo y la respuesta donde reside tu libertad última.</p>
-</div>
-<div class="text-center space-y-4">
-<div class="w-20 h-20 bg-brand-teal/10 rounded-full flex items-center justify-center mx-auto mb-6">
-<span class="material-symbols-outlined text-brand-teal text-4xl">healing</span>
-</div>
-<h3 class="text-2xl font-bold text-brand-teal">Gestión del Dolor</h3>
-<p class="text-slate-600 leading-relaxed">Herramientas prácticas para enfrentar el sufrimiento inevitable sin caer en la desesperanza.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 px-6 bg-white" id="facilitador">
-<div class="max-w-6xl mx-auto">
-<div class="grid md:grid-cols-12 gap-12 items-center">
-<div class="md:col-span-5">
-<div class="facilitator-photo-container relative cursor-pointer overflow-hidden rounded-2xl shadow-xl">
-<img alt="Manuel García" class="facilitator-photo relative w-full aspect-[4/5] object-cover object-top" src="facilitador.png"/>
-</div>
-</div>
-<div class="md:col-span-7 space-y-6">
-<div>
-<span class="text-brand-teal font-bold tracking-widest uppercase text-sm mb-2 block">Facilitador</span>       
-<h2 class="text-5xl font-black text-brand-navy mb-2 tracking-tight">Manuel García</h2>
-<div class="flex flex-col gap-1">
-<span class="text-xl font-semibold text-brand-navy/80">Lic en Psicología Teologia y Filosofia</span>
-<span class="text-brand-teal font-bold uppercase tracking-wider text-sm">Presidente del Instituto Venezolano de Logoterapia</span>
-</div>
-</div>
-<p class="text-slate-700 text-lg leading-relaxed font-sans max-w-xl">
-                        Con amplia experiencia en formación y acompañamiento desde la Logoterapia, Manuel te guiará de forma cercana, humana y clara a lo largo del proceso.
-                    </p>
-<div class="flex flex-wrap gap-4">
-<span class="px-5 py-2.5 border-2 border-brand-teal text-brand-teal font-bold text-xs uppercase tracking-widest rounded-full flex items-center gap-2">
-<span class="material-symbols-outlined text-sm">school</span>
-                            Especialidad: Formación Humana
-                        </span>
-<span class="px-5 py-2.5 border-2 border-brand-teal text-brand-teal font-bold text-xs uppercase tracking-widest rounded-full flex items-center gap-2">
-<span class="material-symbols-outlined text-sm">verified</span>
-                            Enfoque: Logoterapia IVEL
-                        </span>
-</div>
-<div class="pt-6 border-t border-slate-200">
-<p class="text-brand-navy italic text-xl font-serif">
-                            "Mi propósito es facilitar el puente para que cada persona encuentre la luz de su propio sentido, incluso en la oscuridad más densa."
-                        </p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 px-6 bg-white">
-<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-px bg-slate-200 rounded-3xl overflow-hidden border border-slate-200 shadow-xl">
-<div class="bg-white p-12 lg:p-16">
-<h3 class="text-2xl font-black text-brand-teal mb-8 flex items-center gap-3">
-<span class="material-symbols-outlined fill-1">check_circle</span> Este curso es para ti si...
-                </h3>
-<ul class="space-y-6">
-<li class="flex gap-4 text-slate-700">
-<span class="material-symbols-outlined text-brand-teal font-bold">check</span>
-<p class="font-medium">Buscas respuestas más allá de lo material.</p>
-</li>
-<li class="flex gap-4 text-slate-700">
-<span class="material-symbols-outlined text-brand-teal font-bold">check</span>
-<p class="font-medium">Atraviesas una transición vital (duelo, retiro, crisis).</p>
-</li>
-<li class="flex gap-4 text-slate-700">
-<span class="material-symbols-outlined text-brand-teal font-bold">check</span>
-<p class="font-medium">Sientes que tu vida carece de un 'para qué'.</p>
-</li>
-<li class="flex gap-4 text-slate-700">
-<span class="material-symbols-outlined text-brand-teal font-bold">check</span>
-<p class="font-medium">Deseas herramientas prácticas de autoayuda profunda.</p>
-</li>
-</ul>
-</div>
-<div class="bg-slate-50 p-12 lg:p-16">
-<h3 class="text-2xl font-black text-slate-400 mb-8 flex items-center gap-3">
-<span class="material-symbols-outlined">cancel</span> No es para ti si...
-                </h3>
-<ul class="space-y-6">
-<li class="flex gap-4 text-slate-500">
-<span class="material-symbols-outlined text-slate-300">circle</span>
-<p>Buscas una terapia clínica individual rápida.</p>
-</li>
-<li class="flex gap-4 text-slate-500">
-<span class="material-symbols-outlined text-slate-300">circle</span>
-<p>Prefieres soluciones superficiales de 'pensamiento positivo'.</p>
-</li>
-<li class="flex gap-4 text-slate-500">
-<span class="material-symbols-outlined text-slate-300">circle</span>
-<p>No estás dispuesto a reflexionar sobre tu propia existencia.</p>
-</li>
-</ul>
-</div>
-</div>
-</section>
-<section class="py-24 px-6" id="inscripcion">
-<div class="max-w-7xl mx-auto">
-<div class="text-center mb-16">
-<h2 class="text-3xl md:text-5xl font-black text-brand-navy mb-4">Empieza tu camino hoy</h2>
-<p class="text-brand-slate/60 italic font-serif text-xl">"Quien tiene un porqué para vivir, puede soportar casi cualquier cómo." — F. Nietzsche</p>
-</div>
-<div class="grid md:grid-cols-3 gap-8 mb-20">
-<div class="flex flex-col items-center text-center p-8 bg-white rounded-2xl border border-slate-100 shadow-sm">
-<span class="material-symbols-outlined text-brand-navy text-4xl mb-4">schedule</span>
-<h4 class="font-bold text-brand-navy">6 Horas Académicas</h4>
-<p class="text-slate-500 text-sm mt-2">Intensivo y transformador</p>
-</div>
-<div class="flex flex-col items-center text-center p-8 bg-white rounded-2xl border border-slate-100 shadow-sm">
-<span class="material-symbols-outlined text-brand-teal text-4xl mb-4">video_call</span>
-<h4 class="font-bold text-brand-navy">Sesiones por Zoom</h4>
-<p class="text-slate-500 text-sm mt-2">En vivo e interactivo</p>
-</div>
-<div class="flex flex-col items-center text-center p-8 bg-white rounded-2xl border border-slate-100 shadow-sm">
-<span class="material-symbols-outlined text-brand-teal text-4xl mb-4">workspace_premium</span>
-<h4 class="font-bold text-brand-navy">Certificado Digital</h4>
-<p class="text-slate-500 text-sm mt-2">Avalado por el IVEL</p>
-</div>
-</div>
-<div class="max-w-xl mx-auto bg-white rounded-[2.5rem] shadow-[0_40px_100px_-20px_rgba(20,63,138,0.2)] border-2 border-slate-50 overflow-hidden text-center relative">
-<div class="bg-brand-navy text-white py-4 font-black uppercase tracking-widest text-xs">Cupos limitados</div>
-<div class="p-12 md:p-16">
-<h3 class="text-brand-slate font-bold text-xl mb-2">Inversión en tu bienestar existencial</h3>
-<div class="flex items-center justify-center gap-2 mb-8">
-<span class="text-7xl font-black text-brand-navy">$39</span>
-<div class="text-left">
-<span class="block text-slate-400 font-bold text-xl leading-none">USD</span>
-<span class="block text-slate-300 line-through text-sm">Antes $80</span>
-</div>
-</div>
-<ul class="space-y-4 mb-10 text-left max-w-xs mx-auto">
-<li class="flex items-center gap-3 text-slate-600"><span class="material-symbols-outlined text-brand-teal text-sm">check</span> Acceso a grabaciones</li>
-<li class="flex items-center gap-3 text-slate-600"><span class="material-symbols-outlined text-brand-teal text-sm">check</span> Material de lectura PDF</li>
-<li class="flex items-center gap-3 text-slate-600"><span class="material-symbols-outlined text-brand-teal text-sm">check</span> Grupo de apoyo exclusivo</li>
-</ul>
-<div class="space-y-4">
-<button class="w-full bg-brand-navy hover:bg-slate-800 text-white py-5 rounded-2xl text-xl font-black shadow-lg transition-all hover:scale-[1.02] active:scale-95">
-                            Reservar mi cupo ahora
-                        </button>
-<button class="w-full bg-transparent border-2 border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white py-5 rounded-2xl text-xl font-black shadow-md transition-all hover:scale-[1.02] active:scale-95">
-                            Pagar en Bolívares
-                        </button>
-</div>
-<div class="mt-8 flex items-center justify-center gap-6 opacity-40">
-<img alt="Stripe" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzb1dR7elAvuvUwevuKSbvm2DonlYDas_-jjYZNjF6P-VJdQXvzWqXebOcyTIORXf9dSzeLMf7wusKtjWnp4bg9qCfQQJkle9a3ClrWP1_k_v2PbM_nZgJ2y5aSwnW5EFa7kVnc7F1G03Tuy9z7b9A0LmQ42QreNt_jWnKCAiDJInWevbCHOBOAO47kfeL33tdn0_TJy8zN760-hGiYTA5ZuHDZgL2TVLkkLgdk7wC1UiqTy0N3P7-LeLkYehmKusEtDSopKsu0XM"/>
-<img alt="PayPal" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFieZAF4IRRysHjWsFwN5thRFjYbdGfs2GKvCy2xqcnoEKwHKjZ8QgQmAmOupIOpz0Z_vyyPDetM3XNIj3AcEYz0XAuDc-IT5xfsEG_YTaF3V-KwEMIaLZLvik5qhTrCBzAdSXprPDy6lg4eug_OA1S4Esd8Ia7-ZfaakdgCIYGCaG7dzLYirKgg0rgueCGoJi8EvDn6fM13oSTpDvY0K5QaqT5CgeZviNP5M0XQ_4Ofplclrg3Plr-DzpmE06AIcFzbZ5fRdinyY"/>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 px-6 bg-slate-50" id="faq">
-<div class="max-w-3xl mx-auto">
-<h2 class="text-4xl font-black text-center text-brand-navy mb-16">Preguntas Comunes</h2>
-<div class="space-y-4">
-<details class="group bg-white rounded-2xl border border-slate-100 p-2 shadow-sm">
-<summary class="flex justify-between items-center cursor-pointer list-none font-bold text-lg p-6">
-                        ¿Necesito ser psicólogo para participar?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform text-brand-teal">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-50 pt-4">
-                        No. "Logoterapia Esencial" está diseñado para cualquier persona que busque herramientas existenciales para su vida personal. Los conceptos se explican de forma amena y profunda sin tecnicismos innecesarios.
-                    </div>
-</details>
-<details class="group bg-white rounded-2xl border border-slate-100 p-2 shadow-sm">
-<summary class="flex justify-between items-center cursor-pointer list-none font-bold text-lg p-6">
-                        ¿Qué pasa si no puedo asistir a las sesiones en vivo?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform text-brand-teal">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-50 pt-4">
-                        Todas las clases quedan grabadas y tendrás acceso a ellas por 3 meses para que las consultes cuando desees.
-                    </div>
-</details>
-<details class="group bg-white rounded-2xl border border-slate-100 p-2 shadow-sm">
-<summary class="flex justify-between items-center cursor-pointer list-none font-bold text-lg p-6">
-                        ¿Cómo se realiza el pago desde mi país?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform text-brand-teal">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-50 pt-4">
-                        Aceptamos pagos vía PayPal, Zelle y tarjetas de crédito internacionales a través de Stripe. Si estás en Venezuela, también aceptamos transferencia nacional o pago móvil.
-                    </div>
-</details>
-</div>
-</div>
-</section>
-</main>
-<footer class="bg-white border-t border-slate-100 pt-24 pb-12">
-<div class="max-w-7xl mx-auto px-6">
-<div class="text-center mb-20 max-w-2xl mx-auto">
-<h2 class="text-4xl font-serif font-black mb-6 text-brand-navy">Tu vida tiene un sentido, atrévete a buscarlo</h2>
-<p class="text-brand-slate/60 text-lg mb-10">Te acompañamos en este viaje de redescubrimiento existencial.</p>
-<div class="flex flex-col items-center gap-4">
-<img alt="IVEL Logo" class="h-24 mx-auto" src="logo.png"/>
-<div class="flex flex-col">
-<span class="text-brand-navy font-extrabold tracking-tight text-lg uppercase">Instituto Venezolano de Logoterapia</span>
-<span class="text-brand-teal font-medium tracking-widest text-sm uppercase">Y ANÁLISIS EXISTENCIAL</span>
-</div>
-</div>
-</div>
-<div class="border-t border-slate-100 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
-<p class="text-slate-400 text-sm">©  Instituto Venezolano de Logoterapia y Análisis Existencial. IVEL.</p>
-<div class="flex gap-8">
-<a class="text-slate-400 hover:text-brand-teal transition-colors text-sm font-bold" href="privacidad.html">Política de Privacidad</a>
-<a class="text-slate-400 hover:text-brand-teal transition-colors text-sm font-bold" href="terminos.html">Términos de Servicio</a>
-<a class="text-slate-400 hover:text-brand-teal transition-colors text-sm font-bold" href="#">Contacto</a>
-</div>
-</div>
-</div>
-</footer>
 
-</body></html>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot Instituto de Logoterapia</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+Pro:italic&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-</head>
-<body class="bg-slate-200">
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instituto de Logoterapia - Chatbot</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <style>
         .chat-scroll::-webkit-scrollbar { width: 4px; }
         .chat-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         .animate-msg { animation: fadeIn 0.3s ease-out forwards; }
     </style>
 </head>
-<body class="bg-slate-100">
 
-    <div id="chat-widget" class="fixed bottom-24 right-8 z-[60] hidden transition-all duration-300 transform scale-95 opacity-0">
-        <div class="bg-white w-80 md:w-96 rounded-3xl shadow-2xl border border-slate-100 overflow-hidden font-['Inter']">
-            
-            <div class="bg-[#0f3a85] p-5 text-white flex items-center gap-3">
-                <img src="asesora.png" alt="Ana" class="w-10 h-10 rounded-full border-2 border-[#19a39a] bg-white object-cover">
-                <div>
-                    <p class="font-bold text-sm leading-tight">Ana</p>
-                    <p class="text-[9px] opacity-70 uppercase tracking-wider">Instituto de Logoterapia</p>
+<body class="antialiased">
+
+    <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto flex items-center justify-center px-6 py-4">
+            <div class="flex items-center gap-4">
+                <img alt="Logo IVEL" class="h-12 w-auto" src="logo.png"/>
+                <div class="flex flex-col">
+                    <span class="text-brand-navy font-extrabold tracking-tight text-sm leading-none uppercase">Instituto Venezolano</span>
+                    <span class="text-brand-teal font-medium tracking-tight text-[10px] leading-none uppercase mt-1">de Logoterapia Y ANÁLISIS EXISTENCIAL</span>
                 </div>
             </div>
+        </div>
+    </header>
 
-            <div id="chat-messages" class="h-80 overflow-y-auto p-4 space-y-4 bg-slate-50 chat-scroll flex flex-col">
+    <main>
+        <section class="relative pt-32 pb-20 md:pt-48 md:pb-40 bg-brand-navy text-white text-center">
+            <div class="max-w-5xl mx-auto px-6 relative z-10">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-bold uppercase tracking-widest mb-8">Taller Online en Vivo</span>
+                <h1 class="text-4xl md:text-7xl font-black mb-8 leading-tight">Incluso en el dolor más profundo, hay un sentido esperando ser descubierto</h1>
+                <a href="https://wa.me/584127614923?text=Hola,%20deseo%20reservar%20mi%20cupo%20ahora%20para%20el%20curso%20de%20Logoterapia." target="_blank" class="inline-block bg-brand-teal hover:bg-[#158e83] text-white px-12 py-5 rounded-full text-xl font-black transition-all hover:scale-105 shadow-2xl">
+                    Inscribirme ahora por $39
+                </a>
+            </div>
+        </section>
+
+        <section class="py-24 px-6 bg-brand-teal text-white">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-black mb-6">La Logoterapia</h2>
+                    <p class="text-lg leading-relaxed mb-6">Creada por Viktor Frankl, ayuda a descubrir propósito incluso en la adversidad.</p>
                 </div>
+                <div class="relative group rounded-[2.5rem] overflow-hidden border-4 border-white/20 shadow-2xl">
+                    <img src="viktor frankl.png" alt="Viktor Frankl" class="frankl-portrait w-full h-[500px] object-cover">
+                </div>
+            </div>
+        </section>
 
-            <div class="p-4 bg-white border-t border-slate-100">
+        <section class="py-24 px-6 bg-white">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div class="facilitator-container relative overflow-hidden rounded-2xl shadow-xl">
+                    <img src="facilitador.png" alt="Manuel García" class="facilitator-photo w-full object-cover">
+                </div>
+                <div>
+                    <span class="text-brand-teal font-bold uppercase text-sm">Facilitador</span>
+                    <h2 class="text-5xl font-black text-brand-navy mb-4">Manuel García</h2>
+                    <p class="text-xl font-semibold text-brand-navy/80">Psicólogo, Teología y Filosofía</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 px-6 bg-slate-50" id="inscripcion">
+            <div class="max-w-xl mx-auto bg-white rounded-[2.5rem] shadow-2xl overflow-hidden text-center border border-slate-100">
+                <div class="bg-brand-navy text-white py-4 font-black text-xs uppercase">9 y 10 de Febrero</div>
+                <div class="p-12">
+                    <h3 class="font-bold text-xl mb-6">Inversión en tu bienestar</h3>
+                    <div class="text-7xl font-black text-brand-navy mb-8">$39 <span class="text-xl text-slate-400">USD</span></div>
+                    <div class="space-y-4">
+                        <a href="https://wa.me/584127614923?text=Hola,%20deseo%20reservar%20mi%20cupo%20ahora%20para%20el%20curso%20de%20Logoterapia." target="_blank" class="block bg-brand-navy text-white py-5 rounded-2xl font-black text-xl hover:bg-slate-800 transition-all">Reservar mi cupo ahora</a>
+                        <a href="https://wa.me/584127614923?text=Hola,%20estoy%20interesado%20en%20realizar%20el%20pago%20en%20bolívares." target="_blank" class="block border-2 border-brand-teal text-brand-teal py-5 rounded-2xl font-black text-xl hover:bg-brand-teal hover:text-white transition-all">Pagar en Bolívares</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white border-t border-slate-100 pt-20 pb-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <img src="logo.png" class="h-20 mx-auto mb-4">
+            <p class="text-brand-navy font-extrabold text-lg uppercase">Instituto Venezolano de Logoterapia</p>
+            <p class="text-brand-teal font-medium text-sm mb-8 uppercase leading-none">Y ANÁLISIS EXISTENCIAL.</p>
+            
+            <div class="flex justify-center gap-8 mb-12">
+                <a href="https://www.instagram.com/logoterapiavzla" target="_blank" class="text-slate-400 hover:text-brand-teal transition-all transform hover:scale-125"><i class="fa-brands fa-instagram text-3xl"></i></a>
+                <a href="https://www.facebook.com/logoterapiavzla" target="_blank" class="text-slate-400 hover:text-brand-teal transition-all transform hover:scale-125"><i class="fa-brands fa-facebook-f text-3xl"></i></a>
+                <a href="https://www.tiktok.com/@logoterapia.venez" target="_blank" class="text-slate-400 hover:text-brand-teal transition-all transform hover:scale-125"><i class="fa-brands fa-tiktok text-3xl"></i></a>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 border-t pt-8">
+                <p class="text-slate-400 text-xs">© Instituto Venezolano de Logoterapia. IVEL.</p>
+                <div class="flex gap-8">
+                    <a href="privacidad.html" class="text-slate-400 hover:text-brand-teal text-xs font-bold">Política de Privacidad</a>
+                    <a href="terminos.html" class="text-slate-400 hover:text-brand-teal text-xs font-bold">Términos de Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="chat-widget" class="fixed bottom-24 right-8 z-[60] hidden transition-all duration-300 transform scale-95 opacity-0">
+        <div class="bg-white w-80 md:w-96 rounded-3xl shadow-2xl overflow-hidden font-sans">
+            <div class="bg-brand-navy p-5 text-white flex items-center gap-3">
+                <img src="asesora.png" onerror="this.src='https://ui-avatars.com/api/?name=Ana&background=19A69A&color=fff'" class="w-10 h-10 rounded-full border-2 border-white object-cover">
+                <div><p class="font-bold text-sm leading-tight">Ana</p><p class="text-[9px] opacity-70 uppercase tracking-wider">Instituto de Logoterapia</p></div>
+            </div>
+            <div id="chat-messages" class="h-80 overflow-y-auto p-4 space-y-4 bg-slate-50 chat-scroll flex flex-col"></div>
+            <div class="p-4 bg-white border-t">
                 <div class="flex gap-2">
-                    <input type="text" id="user-input" placeholder="Escribe tu duda..." 
-                           class="flex-1 text-sm bg-slate-100 rounded-full px-4 py-2 outline-none focus:ring-1 focus:ring-[#19a39a]" 
-                           onkeypress="if(event.key==='Enter') handleChat()">
-                    <button onclick="handleChat()" class="bg-[#19a39a] text-white p-2 rounded-full hover:bg-[#0f3a85] transition-colors shadow-md flex items-center">
-                        <span class="material-symbols-outlined text-sm">send</span>
-                    </button>
+                    <input type="text" id="user-input" placeholder="Escribe aquí..." class="flex-1 text-sm bg-slate-100 rounded-full px-4 py-2 outline-none focus:ring-1 focus:ring-brand-teal" onkeypress="if(event.key==='Enter') handleChat()">
+                    <button onclick="handleChat()" class="bg-brand-teal text-white p-2 rounded-full flex items-center shadow-md"><span class="material-symbols-outlined text-sm">send</span></button>
                 </div>
             </div>
         </div>
     </div>
-
-    <button onclick="toggleChat()" class="fixed bottom-8 right-8 w-14 h-14 z-[60] hover:scale-110 active:scale-95 transition-all focus:outline-none">
-        <div class="relative w-full h-full">
-            <img src="asesora.png" alt="Abrir Chat" class="w-full h-full rounded-full shadow-xl border-2 border-[#19a39a] bg-white object-cover">
-            <span class="absolute top-0 right-0 flex h-3 w-3">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#19a39a] opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-[#19a39a]"></span>
-            </span>
-        </div>
+    <button onclick="toggleChat()" class="fixed bottom-8 right-8 w-14 h-14 z-[60] hover:scale-110 active:scale-95 transition-all">
+        <img src="asesora.png" onerror="this.src='https://ui-avatars.com/api/?name=Ana&background=19A69A&color=fff'" class="w-full h-full rounded-full shadow-xl border-2 border-brand-teal bg-white object-cover">
     </button>
 
     <script>
-        const CONFIG = {
-            tlf: "584127614923",
-            fecha: "9 y 10 de febrero",
-            duracion: "2 días intensivos",
-            precio: "USD $39",
-            psicologo: "Psicólogo Manuel García"
-        };
-
+        const CONFIG = { tlf: "584127614923", fecha: "9 y 10 de febrero", psicologo: "Psicólogo Manuel García" };
         let chatIniciado = false;
-
         function toggleChat() {
             const chat = document.getElementById('chat-widget');
-            const isHidden = chat.classList.contains('hidden');
-            
-            if (isHidden) {
+            if (chat.classList.contains('hidden')) {
                 chat.classList.remove('hidden');
-                setTimeout(() => {
-                    chat.classList.remove('scale-95', 'opacity-0');
-                    chat.classList.add('scale-100', 'opacity-100');
-                }, 10);
-                
+                setTimeout(() => { chat.classList.remove('scale-95', 'opacity-0'); chat.classList.add('scale-100', 'opacity-100'); }, 10);
                 if (!chatIniciado) {
-                    setTimeout(() => {
-                        enviarMensajeBot(`¡Hola! Soy Ana. El curso con el <strong>${CONFIG.psicologo}</strong> es el <strong>${CONFIG.fecha}</strong> y dura <strong>${CONFIG.duracion}</strong>.<br><br>¿Buscas herramientas para tu crecimiento personal o te interesa la formación profesional?`);
-                    }, 400);
+                    setTimeout(() => enviarMensajeBot(`¡Hola! Soy Ana. El taller con el <strong>${CONFIG.psicologo}</strong> es el <strong>${CONFIG.fecha}</strong>.`), 500);
                     chatIniciado = true;
                 }
-            } else {
-                chat.classList.add('scale-95', 'opacity-0');
-                chat.classList.remove('scale-100', 'opacity-100');
-                setTimeout(() => chat.classList.add('hidden'), 300);
-            }
+            } else { chat.classList.add('scale-95', 'opacity-0'); setTimeout(() => chat.classList.add('hidden'), 300); }
         }
-
-        function enviarMensajeBot(html) {
-            const container = document.getElementById('chat-messages');
-            const div = document.createElement('div');
-            div.className = "bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-sm border border-slate-100 max-w-[85%] text-slate-700 self-start animate-msg";
-            div.innerHTML = html;
-            container.appendChild(div);
-            container.scrollTop = container.scrollHeight;
+        function enviarMensajeBot(h) {
+            const c = document.getElementById('chat-messages');
+            const d = document.createElement('div');
+            d.className = "bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-sm border max-w-[85%] text-slate-700 self-start animate-msg";
+            d.innerHTML = h; c.appendChild(d); c.scrollTop = c.scrollHeight;
         }
-
         function handleChat() {
-            const input = document.getElementById('user-input');
-            const container = document.getElementById('chat-messages');
-            const texto = input.value.trim();
-            if (!texto) return;
-
-            // Mensaje del Usuario
-            const userDiv = document.createElement('div');
-            userDiv.className = "bg-[#0f3a85] text-white p-3 rounded-2xl rounded-tr-none text-sm ml-auto max-w-[80%] self-end animate-msg";
-            userDiv.textContent = texto;
-            container.appendChild(userDiv);
-            input.value = "";
-            container.scrollTop = container.scrollHeight;
-
-            const textoLow = texto.toLowerCase();
-
-            // Respuesta Lógica
+            const i = document.getElementById('user-input');
+            const t = i.value.trim(); if (!t) return;
+            const u = document.createElement('div');
+            u.className = "bg-brand-navy text-white p-3 rounded-2xl rounded-tr-none text-sm ml-auto max-w-[80%] self-end animate-msg";
+            u.textContent = t; document.getElementById('chat-messages').appendChild(u); i.value = "";
             setTimeout(() => {
-                let r = "";
-                if (textoLow.match(/bolivares|bolívares|bs|pago movil|pago móvil|tasa/)) {
-                    r = `Aceptamos <strong>bolívares</strong>. Te conecto con administración para los datos del Pago Móvil:<br><br>
-                        <a href="https://wa.me/${CONFIG.tlf}?text=Hola,%20deseo%20realizar%20mi%20pago%20en%20bolívares" target="_blank" class="block bg-[#19a39a] text-white p-2 rounded-xl text-center font-bold text-xs hover:opacity-90">PAGAR EN BS</a>`;
-                } 
-                else if (textoLow.match(/fecha|cuando|cuándo|inicio|empieza|dia|día/)) {
-                    r = `Iniciamos el <strong>${CONFIG.fecha}</strong>. Son <strong>${CONFIG.duracion}</strong> en vivo por Zoom con el ${CONFIG.psicologo}.<br><br>
-                        <a href="https://wa.me/${CONFIG.tlf}?text=Hola,%20quiero%20reservar%20mi%20cupo%20para%20febrero" target="_blank" class="block bg-[#0f3a85] text-white p-2 rounded-xl text-center font-bold text-xs hover:opacity-90">RESERVAR MI CUPO</a>`;
-                }
-                else if (textoLow.match(/precio|costo|cuánto|cuanto|valor|inscripcion/)) {
-                    r = `La inversión es de <strong>${CONFIG.precio}</strong>. Incluye clases en vivo, material PDF y certificado digital.`;
-                }
-                else {
-                    r = `<p class="mb-3 text-[#0f3a85] font-semibold text-xs text-center">¿En qué puedo ayudarte hoy?</p>
-                        <div class="flex flex-col gap-2">
-                            <a href="https://wa.me/${CONFIG.tlf}?text=Hola,%20busco%20información%20sobre%20el%20APOYO%20PERSONAL" target="_blank" class="bg-[#19a39a] text-white p-2 rounded-xl text-center font-bold text-[10px] hover:opacity-90 transition-all">BUSCO APOYO PERSONAL</a>
-                            <a href="https://wa.me/${CONFIG.tlf}?text=Hola,%20solicito%20información%20sobre%20la%20CERTIFICACIÓN%20PROFESIONAL" target="_blank" class="bg-[#0f3a85] text-white p-2 rounded-xl text-center font-bold text-[10px] hover:opacity-90 transition-all">CERTIFICACIÓN PROFESIONAL</a>
-                        </div>
-                        <p class="mt-3 text-[8px] text-slate-400 text-center italic leading-none">Esta es una guía informativa, no constituye terapia clínica.</p>`;
-                }
+                let r = t.toLowerCase().includes('bolivares') ? `Aceptamos bolívares. <a href="https://wa.me/${CONFIG.tlf}?text=Pagar%20en%20BS" target="_blank" class="block bg-brand-teal text-white p-2 mt-2 rounded-xl text-center font-bold">PAGAR EN BS</a>` : `¿Deseas información sobre el apoyo personal o profesional?`;
                 enviarMensajeBot(r);
             }, 600);
         }
     </script>
 </body>
 </html>
-
-
-
