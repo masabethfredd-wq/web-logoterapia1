@@ -1,66 +1,81 @@
 <!DOCTYPE html>
-<html class="light" lang="es"><head>
+<html class="light" lang="es">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Logoterapia Esencial | Instituto Venezolano de Logoterapia</title>
+
+<!-- Tailwind y fuentes -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Tailwind Config -->
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "brand-teal": "#19A69A",
-                        "brand-navy": "#123D8A",
-                        "brand-slate": "#1e293b",
-                        "background-light": "#fcfdfd",
-                        "neutral-soft": "#f8fafc",
-                    },
-                    fontFamily: {
-                        "sans": ["Plus Jakarta Sans", "sans-serif"],
-                        "serif": ["Playfair Display", "serif"]
-                    }
-                },
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "brand-teal": "#19A69A",
+                "brand-navy": "#123D8A",
+                "brand-slate": "#1e293b",
+                "background-light": "#fcfdfd",
+                "neutral-soft": "#f8fafc",
             },
-        }
-    </script>
+            fontFamily: {
+                "sans": ["Plus Jakarta Sans", "sans-serif"],
+                "serif": ["Playfair Display", "serif"]
+            }
+        },
+    },
+}
+</script>
+
+<!-- Estilos personalizados -->
 <style type="text/tailwindcss">
-        @layer base {
-            body { @apply font-sans bg-background-light text-brand-slate; }
-            h1, h2, h3, h4 { @apply font-serif; }
-        }
-        .hero-gradient {
-            background: linear-gradient(135deg, #19A69A 0%, #ffffff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
-        .frankl-portrait {
-            filter: grayscale(100%);
-            transition: filter 0.7s ease-in-out;
-        }
-        .frankl-portrait:hover {
-            filter: grayscale(0%);
-        }
-        .facilitator-photo {
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .facilitator-photo-container:hover .facilitator-photo {
-            transform: translateY(-12px) scale(1.05);
-        }
-        .diffuse-gradient {
-            background: radial-gradient(circle at center, rgba(18, 61, 138, 0.4) 0%, rgba(25, 166, 154, 0.2) 50%, transparent 100%);
-        }
-        .chat-scroll::-webkit-scrollbar { width: 4px; }
-        .chat-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .animate-msg { animation: fadeIn 0.3s ease-out forwards; }
-    </style>
+@layer base {
+    body { @apply font-sans bg-background-light text-brand-slate; }
+    h1, h2, h3, h4 { @apply font-serif; }
+}
+.hero-gradient {
+    background: linear-gradient(135deg, #19A69A 0%, #ffffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+.frankl-portrait { filter: grayscale(100%); transition: filter 0.7s ease-in-out; }
+.frankl-portrait:hover { filter: grayscale(0%); }
+.facilitator-photo { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+.facilitator-photo-container:hover .facilitator-photo { transform: translateY(-12px) scale(1.05); }
+.diffuse-gradient { background: radial-gradient(circle at center, rgba(18, 61, 138, 0.4) 0%, rgba(25, 166, 154, 0.2) 50%, transparent 100%); }
+.chat-scroll::-webkit-scrollbar { width: 4px; }
+.chat-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.animate-msg { animation: fadeIn 0.3s ease-out forwards; }
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);
+t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1349329180295315');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1349329180295315&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
 </head>
 <body class="antialiased">
+
+<!-- Header -->
 <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100">
 <div class="max-w-7xl mx-auto flex items-center justify-center px-6 py-4">
 <div class="flex items-center gap-4">
@@ -73,7 +88,10 @@
 </div>
 </div>
 </header>
+
 <main>
+
+<!-- Hero -->
 <section class="relative pt-32 pb-20 md:pt-48 md:pb-40 overflow-hidden bg-brand-navy">
 <div class="absolute inset-0">
 <img alt="Serene horizon meaning" class="w-full h-full object-cover opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKEdCBsueqTfpx2DEnZYx6IagowOMC7-XvD3y0YHH2lh1Ren-GiGOGMsTqxYchHAbobCqiG98MLb9VINOivuqpl0gwsqrbuFumhT6Y1XmFxGkvp11yR5kCEwf4uYZOSKv6VLdTKl29mkvs0P-cRfGFnwG_mnze0MA9CqXGygFHzrALCt5l8AccwwTzPOhrwSdGX8jbe5VWLm6zDgCie9_Ul7bXYwfPX28qQOeHdcV91dStL_oOu0rDLkgsQfuvAfpOS_KSsK7_CQE"/>
@@ -81,18 +99,18 @@
 </div>
 <div class="max-w-5xl mx-auto px-6 relative z-10 text-center">
 <span class="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-bold uppercase tracking-widest mb-8">
-                Taller Online en Vivo • Via Zoom
-            </span>
+Taller Online en Vivo • Via Zoom
+</span>
 <h1 class="text-white text-4xl md:text-7xl font-black leading-[1.1] mb-8">
-                Incluso en el dolor más profundo, hay un Sentido esperando ser descubierto
-            </h1>
+Incluso en el dolor más profundo, hay un Sentido esperando ser descubierto
+</h1>
 <p class="text-white/80 text-xl md:text-2xl font-light max-w-3xl mx-auto leading-relaxed mb-12">
-                Aprende a transformar la crisis en oportunidad a través de los fundamentos de la Logoterapia de Viktor Frankl.
-            </p>
+Aprende a transformar la crisis en oportunidad a través de los fundamentos de la Logoterapia de Viktor Frankl.
+</p>
 <div class="flex flex-col items-center gap-6">
 <a href="https://wa.me/584124170780?text=📲Hola,%20deseo%20reservar%20mi%20cupo%20ahora%20para%20el%20curso%20de%20Logoterapia." target="_blank" class="bg-brand-teal hover:bg-[#158e83] text-white px-12 py-5 rounded-full text-xl font-black transition-all hover:scale-105 shadow-2xl">
-                    Inscribirme ahora por $39
-                </a>
+Inscribirme ahora por $39
+</a>
 <div class="flex items-center gap-4 text-white/60 text-sm">
 <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">calendar_today</span> Próxima fecha: 23 y 24 Febrero</span>
 <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">group</span> Cupos Limitados</span>
@@ -100,6 +118,8 @@
 </div>
 </div>
 </section>
+
+<!-- Sección de vacíos -->
 <section class="py-24 px-6 bg-white">
 <div class="max-w-7xl mx-auto">
 <div class="text-center mb-16">
@@ -107,21 +127,25 @@
 <div class="w-20 h-1.5 bg-brand-teal mx-auto rounded-full"></div>
 </div>
 <div class="grid md:grid-cols-4 gap-8 mb-20">
+<!-- Vacío Existencial -->
 <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-brand-teal transition-colors text-center">
 <span class="material-symbols-outlined text-brand-teal text-4xl mb-4 block">sentiment_dissatisfied</span>
 <h3 class="text-xl font-bold mb-3 text-brand-navy">Vacío Existencial</h3>
 <p class="text-slate-600 leading-relaxed text-sm">Sientes que a pesar de tenerlo "todo", falta algo esencial que le dé peso a tu vida.</p>
 </div>
+<!-- Desorientación -->
 <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-brand-teal transition-colors text-center">
 <span class="material-symbols-outlined text-brand-teal text-4xl mb-4 block">explore_off</span>
 <h3 class="text-xl font-bold mb-3 text-brand-navy">Desorientación</h3>
 <p class="text-slate-600 leading-relaxed text-sm">Te cuesta tomar decisiones o encontrar una dirección clara tras cambios drásticos.</p>
 </div>
+<!-- Crisis Profunda -->
 <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-brand-teal transition-colors text-center">
 <span class="material-symbols-outlined text-brand-teal text-4xl mb-4 block">emergency_home</span>
 <h3 class="text-xl font-bold mb-3 text-brand-navy">Crisis Profunda</h3>
 <p class="text-slate-600 leading-relaxed text-sm">El dolor de una pérdida o fracaso parece insuperable y sin una salida lógica.</p>
 </div>
+<!-- Anhelo de Trascendencia -->
 <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-brand-teal transition-colors text-center">
 <span class="material-symbols-outlined text-brand-teal text-4xl mb-4 block">auto_awesome</span>
 <h3 class="text-xl font-bold mb-3 text-brand-navy">Anhelo de Trascendencia</h3>
@@ -130,6 +154,7 @@
 </div>
 <div class="max-w-4xl mx-auto text-center">
 <p class="font-serif italic text-2xl md:text-3xl text-brand-navy leading-relaxed opacity-90 border-t border-slate-100 pt-12">
+
                     "No somos víctimas de nuestras circunstancias, sino dueños de nuestra actitud frente a ellas."
                 </p>
 </div>
@@ -535,9 +560,24 @@ Creada por Viktor Frankl, es un enfoque de psicoterapia existencial que sostiene
                 enviarMensajeBot(r);
             }, 600);
         }
+        <a id="mobileEnrollBtn" href="https://wa.me/584124170780?text=🎟️Hola,%20quiero%20reservar%20mi%20cupo%20para%20el%20curso%20de%20Logoterapia."
+   onclick="fbq('track','InitiateCheckout');"
+   class="fixed bottom-0 left-0 w-full bg-brand-teal text-white text-center py-4 font-bold z-50 md:hidden opacity-0 transition-opacity duration-500">
+   Inscribirme ahora
+</a>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        const btn = document.getElementById('mobileEnrollBtn');
+        btn.classList.remove('opacity-0');
+        btn.classList.add('opacity-100');
+    }, 5000); // Aparece después de 5 segundos
+});
     </script>
 </body>
 </html>
+
 
 
 
